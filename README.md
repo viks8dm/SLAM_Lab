@@ -12,7 +12,6 @@ Since I have not tested on multiple platforms, and versions, I am listing only t
 ### Steps to launch the simulation
 
 #### Step 1 Create a catkin workspace
-Skipt this step if you already have a workspace
 
 ```sh
 $ mkdir -p /home/workspace/catkin_ws/src
@@ -46,7 +45,7 @@ $ rosdep -i install turtlebot_teleop
 ```sh
 $ catkin_make
 $ source devel/setup.bash
-$ ./slam.sh
+$ ./src/SLAM_Lab/slam.sh
 ```
 This will launch Gazebo and Rviz. Rviz will load previously saved configuration.
 
