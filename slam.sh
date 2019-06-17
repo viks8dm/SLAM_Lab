@@ -7,7 +7,7 @@ sleep 5
 xterm -e "source devel/setup.bash ; roslaunch turtlebot_teleop keyboard_teleop.launch " &
 
 sleep 2
-xterm -e "cd $(pwd)/../..; source devel/setup.bash ; rosrun gmapping slam_gmapping  " &
+xterm -e "source devel/setup.bash ; rosrun gmapping slam_gmapping  " &
 
 sleep 3
-xterm  -e "cd $(pwd)/../..; source devel/setup.bash ; rosrun rviz rviz -d $(pwd)/src/rviz/slam_rviz.rviz" &
+xterm  -e "source devel/setup.bash ; rosrun rviz rviz -d $(pwd)/src/SLAM_Lab/rviz/slam_rviz.rviz" &
