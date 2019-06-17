@@ -28,9 +28,22 @@ $ cd /home/workspace/catkin_ws/src
 $ git clone https://github.com/viks8dm/SLAM_Lab.git
 ```
 
-#### Step 3 Build, source workspace & launch nodes
+#### Step 3 Clone supporting packages in src
+```sh
+$ git clone https://github.com/turtlebot/turtlebot_simulator
+$ git clone https://github.com/turtlebot/turtlebot
+```
+
+#### Step 4 Install package dependencies
 ```sh
 $ cd ..
+$ source devel/setup.bash
+$ rosdep -i install turtlebot_gazebo
+$ rosdep -i install turtlebot_teleop
+```
+
+#### Step 5 Build, source workspace & launch nodes
+```sh
 $ catkin_make
 $ source devel/setup.bash
 $ ./slam.sh
